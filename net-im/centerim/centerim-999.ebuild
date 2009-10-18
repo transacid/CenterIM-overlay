@@ -75,7 +75,7 @@ src_prepare() {
 	./autogen.sh
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_with ssl) \
 		$(use_enable aim) \
