@@ -12,6 +12,7 @@ DESCRIPTION="CenterIM is a fork of CenterICQ - a ncurses ICQ/Yahoo!/AIM/IRC/MSN/
 EGIT_REPO_URI="git://repo.or.cz/centerim.git"
 EGIT_BRANCH="mob"
 EGIT_TREE="mob"
+EGIT_BOOTSTRAP="autogen.sh"
 HOMEPAGE="http://www.centerim.org/"
 SLOT="0"
 LICENSE="GPL-2"
@@ -69,10 +70,6 @@ pkg_setup() {
 		ewarn "You need jpeg support to be able to register Gadu-Gadu accounts!"
 		ewarn
 	fi
-}
-
-src_prepare() {
-	./autogen.sh
 }
 
 src_configure() {
