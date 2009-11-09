@@ -24,7 +24,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 		crypt? ( >=app-crypt/gpgme-1.0.2 )
 	)
 	msn? (
-		net-misc/curl[ssl]
+		|| ( <net-misc/curl-7.19.7[ssl] >=net-misc/curl-7.19.7[openssl] )
 		dev-libs/openssl
 	)"
 
