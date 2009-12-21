@@ -24,8 +24,20 @@ DEPEND=">=sys-libs/ncurses-5.2
 		crypt? ( >=app-crypt/gpgme-1.0.2 )
 	)
 	msn? (
-		|| ( <net-misc/curl-7.19.7[ssl] >=net-misc/curl-7.19.7[openssl] )
-		dev-libs/openssl
+		|| (
+			<net-misc/curl-7.19.7[ssl]
+			>=net-misc/curl-7.19.7[openssl]
+			>=net-misc/curl-7.19.7[gnutls]
+			>=net-misc/curl-7.19.7[nss]
+		)
+	)
+	yahoo? (
+		|| (
+			<net-misc/curl-7.19.7[ssl]
+			>=net-misc/curl-7.19.7[openssl]
+			>=net-misc/curl-7.19.7[gnutls]
+			>=net-misc/curl-7.19.7[nss]
+		)
 	)"
 
 RDEPEND="${DEPEND}
