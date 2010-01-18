@@ -8,7 +8,7 @@ PROTOCOL_IUSE="+aim gadu +icq +irc +jabber lj +msn rss +yahoo"
 IUSE="${PROTOCOL_IUSE} bidi nls ssl crypt jpeg otr"
 
 DESCRIPTION="CenterIM is a fork of CenterICQ - a ncurses ICQ/Yahoo!/AIM/IRC/MSN/Jabber/GaduGadu/RSS/LiveJournal Client"
-SRC_URI="http://www.centerim.org/download/mobshots/${PN}-4.22.8-25-g633d.tar.gz"
+SRC_URI="http://www.centerim.org/download/mobshots/${PN}-4.22.9.1-d637c.tar.gz"
 RESTRICT="mirror"
 HOMEPAGE="http://www.centerim.org/"
 SLOT="0"
@@ -43,7 +43,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
 
-S="${WORKDIR}"/${PN}-4.22.8-25-g633d
+S="${WORKDIR}"/${PN}-4.22.9.1-d637c
 
 check_protocol_iuse() {
 	local flag
