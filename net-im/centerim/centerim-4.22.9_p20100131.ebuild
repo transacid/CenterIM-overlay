@@ -112,5 +112,7 @@ pkg_postinst() {
 	ewarn "That means it is under development und just for testing"
 	ewarn "please report any bugs to http://bugzilla.centerim.org/"
 	ewarn "in addition please also report to the devel mailing list as"
-	ewarn "described at http://centerim.org or join us in #centerim on freenode"
+	ewarn "described at http://centerim.org or join us in #centerim on freenode."
+	ewarn ""
+	ewarn "Direct question about the overlay to transacid@centerim.org"
 }
