@@ -1,4 +1,4 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -25,18 +25,16 @@ DEPEND=">=sys-libs/ncurses-5.2
 	)
 	msn? (
 		|| (
-			<net-misc/curl-7.19.7[ssl]
-			>=net-misc/curl-7.19.7[openssl]
-			>=net-misc/curl-7.19.7[gnutls]
-			>=net-misc/curl-7.19.7[nss]
+			>=net-misc/curl-7.19.6[ssl]
+			>=net-misc/curl-7.19.6[gnutls]
+			>=net-misc/curl-7.19.6[nss]
 		)
 	)
 	yahoo? (
 		|| (
-			<net-misc/curl-7.19.7[ssl]
-			>=net-misc/curl-7.19.7[openssl]
-			>=net-misc/curl-7.19.7[gnutls]
-			>=net-misc/curl-7.19.7[nss]
+			>=net-misc/curl-7.19.6[ssl]
+			>=net-misc/curl-7.19.6[gnutls]
+			>=net-misc/curl-7.19.6[nss]
 		)
 	)"
 
@@ -77,6 +75,16 @@ pkg_setup() {
 		ewarn "You need jpeg support to be able to register Gadu-Gadu accounts!"
 		ewarn
 	fi
+}
+
+src_prepare() {
+	default
+
+	# Don't execute git commands, bug #228151
+	cat >"${S}"/misc/git-version-gen <<-EOF
+		#!/bin/sh
+		echo -n "${PVR}"
+	EOF
 }
 
 src_configure() {
