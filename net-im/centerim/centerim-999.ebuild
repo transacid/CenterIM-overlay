@@ -21,7 +21,7 @@ KEYWORDS=""
 DEPEND=">=sys-libs/ncurses-5.2
 	bidi? ( dev-libs/fribidi )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	jabber? (
 		otr? ( net-libs/libotr )
 		crypt? ( >=app-crypt/gpgme-1.0.2 )
